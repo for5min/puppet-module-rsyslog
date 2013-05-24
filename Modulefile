@@ -10,4 +10,4 @@ project_page 'https://github.com/ghoneycutt/puppet-module-rsyslog'
 dependency 'ghoneycutt/sysklogd', '1.x'
 
 # this is likely breaking librarian-puppet
-#dependency 'ghoneycutt/common',   '1.0.x'
+dependency 'ghoneycutt/common',   '1.0.x'
