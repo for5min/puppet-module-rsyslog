@@ -7,5 +7,7 @@ summary 'Manage rsyslog'
 description 'Manage rsyslog'
 project_page 'https://github.com/ghoneycutt/puppet-module-rsyslog'
 
-dependency 'ghoneycutt/sysklogd', '>= 0.0.1'
-dependency 'ghoneycutt/common',   '1.0.x'
+#dependency 'ghoneycutt/sysklogd', '>= 0.0.1'
+
+# this is likely breaking librarian-puppet
+#dependency 'ghoneycutt/common',   '1.0.x'
