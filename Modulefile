@@ -7,5 +7,5 @@ summary 'Manage rsyslog'
 description 'Manage rsyslog'
 project_page 'https://github.com/ghoneycutt/puppet-module-rsyslog'
 
-dependency 'ghoneycutt/sysklogd, '>= 0.0.1'
-dependency 'ghoneycutt/common, '>= 0.0.1'
+dependency 'ghoneycutt/sysklogd', '>= 0.0.1'
+dependency 'ghoneycutt/common', '>= 1.0.0'
