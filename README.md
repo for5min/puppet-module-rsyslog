@@ -1,4 +1,7 @@
 # rsyslog module #
+===
+
+[![Build Status](https://travis-ci.org/ghoneycutt/puppet-module-rsyslog.png)](https://travis-ci.org/ghoneycutt/puppet-module-rsyslog)
 
 [![Build Status](
 https://api.travis-ci.org/ghoneycutt/puppet-module-rsyslog.png?branch=master)](https://travis-ci.org/ghoneycutt/puppet-module-rsyslog)
@@ -10,12 +13,16 @@ Inspired by [saz/rsyslog](https://github.com/saz/puppet-rsyslog/)
 
 This module will ensure that sysklogd is absent, which is needed on EL5.
 
+===
+
 # Compatability #
 
 This module has been tested to work on the following systems.
 
  * EL 5
  * EL 6
+
+===
 
 # Parameters #
 
@@ -83,7 +90,8 @@ sysconfig_path
 --------------
 Path of the rsyslog sysconfig config file.
 
-- *Default*: '/etc/sysconfig/rsyslog'
+- *Default*: '/etc/sysconfig/rsyslog' # EL
+- *Default*: '/etc/default/rsyslog'   # Debian
 
 sysconfig_owner
 ---------------
@@ -126,6 +134,12 @@ log_dir
 Path to store logs, if $is_log_server is true.
 
 - *Default*: '/srv/logs'
+
+remote_template
+---------------
+Template path to store logs from remote hosts, appended after log_dir
+
+- *Default*: '%HOSTNAME%/%$YEAR%-%$MONTH%-%$DAY%.log'
 
 default_remote_logging
 ----------------------
